@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/leks.h
+string
+-
+
+../include/list.h
+iostream
+-
+
+../include/my_stack.h
+list.h
+../include/list.h
+
+/usr/coding/lab/3/leks/leks.cpp
+leks.h
+/usr/coding/lab/3/leks/leks.h
+iostream
+-
+my_stack.h
+/usr/coding/lab/3/leks/my_stack.h
+

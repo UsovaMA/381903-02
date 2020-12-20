@@ -1,0 +1,2 @@
+/usr/bin/ar qc libleks.a CMakeFiles/leks.dir/leks.cpp.o
+/usr/bin/ranlib libleks.a

@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/list.h
+iostream
+-
+
+../include/my_queue.h
+list.h
+../include/list.h
+
+../include/my_stack.h
+list.h
+../include/list.h
+
+/usr/coding/lab/3/src/broadcast.cpp
+broadcast.h
+/usr/coding/lab/3/src/broadcast.h
+math.h
+-
+
+/usr/coding/lab/3/src/broadcast.h
+my_queue.h
+/usr/coding/lab/3/src/my_queue.h
+my_stack.h
+/usr/coding/lab/3/src/my_stack.h
+string
+-
+

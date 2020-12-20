@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsynt.a CMakeFiles/synt.dir/synt.cpp.o
+/usr/bin/ranlib libsynt.a

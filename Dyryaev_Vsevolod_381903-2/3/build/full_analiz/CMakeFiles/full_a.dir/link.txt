@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfull_a.a CMakeFiles/full_a.dir/full_analiz.cpp.o
+/usr/bin/ranlib libfull_a.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbroadcast.a CMakeFiles/broadcast.dir/broadcast.cpp.o
+/usr/bin/ranlib libbroadcast.a

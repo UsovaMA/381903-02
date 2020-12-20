@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/runTests.dir/test_main.cpp.o -o runTests  -Wl,-Bstatic -lgtest -Wl,-Bdynamic -lpthread ../leks/libleks.a ../synt/libsynt.a ../broadcast/libbroadcast.a ../full_analiz/libfull_analiz.a ../leks/libleks.a ../synt/libsynt.a ../broadcast/libbroadcast.a 

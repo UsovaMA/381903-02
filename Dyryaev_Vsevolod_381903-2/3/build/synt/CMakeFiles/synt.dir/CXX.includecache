@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/list.h
+iostream
+-
+
+../include/my_queue.h
+list.h
+../include/list.h
+
+../include/my_stack.h
+list.h
+../include/list.h
+
+../include/synt.h
+my_stack.h
+../include/my_stack.h
+my_queue.h
+../include/my_queue.h
+iostream
+-
+string
+-
+
+/usr/coding/lab/3/synt/synt.cpp
+synt.h
+/usr/coding/lab/3/synt/synt.h
+iostream
+-
+
