@@ -44,16 +44,7 @@ TEST(Stack, copied_stack_is_equal_to_source_one)
 
 	Stack<int> s1(s);
 
-	EXPECT_EQ(s, s1);
-}
-
-TEST(Stack, copied_stack_has_its_own_memory)
-{
-	Stack<int> s(5);
-    s.push(10);
-	Stack<int> s1(s);
-
-	EXPECT_NE(&(s.pop()), &(s1.pop()));
+	EXPECT_EQ(true,s == s1);
 }
 
 TEST(Stack, can_assign_stacks_of_equal_size)

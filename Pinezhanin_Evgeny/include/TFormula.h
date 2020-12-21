@@ -1,7 +1,7 @@
 #pragma once
 
 #include<iostream>
-#include<cstring>
+#include<string>
 #include<Collection.h>
 
 using namespace std;
@@ -14,7 +14,9 @@ enum State {q0, q1, q2, q3};
 struct Lexem {
 	string s;
 	TypeElem te;
-    int val = -1;
+    int val;
+
+	Lexem(const string _s, const TypeElem _te, int _val = -1) : s(_s), te(_te), val(_val) { };
 };
 
 class TFormula {

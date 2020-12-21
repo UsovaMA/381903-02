@@ -43,16 +43,7 @@ TEST(Queue, copied_queue_is_equal_to_source_one)
 
 	Queue<int> q1(q);
 
-	EXPECT_EQ(q, q1);
-}
-
-TEST(Queue, copied_queue_has_its_own_memory)
-{
-	Queue<int> q(5);
-    q.push(10);
-	Queue<int> q1(q);
-
-	EXPECT_NE(&(q.pop()), &(q1.pop()));
+	EXPECT_EQ(true, q == q1);
 }
 
 TEST(Queue, can_assign_queues_of_equal_size)
