@@ -27,8 +27,23 @@ int main()
 			f.conversToRevPolNot();
 			strOut = f.getOutFormula();
 			cout << "Reverse Polish notation: " << strOut << endl;
-			int ans = f.calcArithmExp();
-			cout << "Answer: " << ans << endl;
+			if (f.isVars()) {
+				do
+				{
+					f.setVars();
+					cin.get();
+					int ans = f.calcArithmExp();
+					cout << "Answer: " << ans << endl;
+					cout << "Enter \"v\" to change the variables, other to continue: ";
+					cin >> str;
+					cin.get();
+				} while(str == "v");
+			}
+			else
+			{
+				int ans = f.calcArithmExp();
+				cout << "Answer: " << ans << endl;
+			}
 		}
 		catch(const std::exception& e)
 		{

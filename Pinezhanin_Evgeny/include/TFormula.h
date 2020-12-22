@@ -2,21 +2,26 @@
 
 #include<iostream>
 #include<string>
+#include<map>
+#include<limits>
+#include<cmath>
 #include<Collection.h>
 
 using namespace std;
 
 const int maxSizeCollection = 1000;
 
-enum TypeElem {VALUE, UNARYOP, BINARYOP, LP, RP};
+enum TypeElem {VALUE, VAR, UNARYOP, BINARYOP, LP, RP};
 enum State {q0, q1, q2, q3};
 
 struct Lexem {
 	string s;
 	TypeElem te;
     int val;
+	int prior;
 
-	Lexem(const string _s, const TypeElem _te, int _val = -1) : s(_s), te(_te), val(_val) { };
+	Lexem(const string _s, const TypeElem _te, int _val = -1, int _prior = -1) : 
+	s(_s), te(_te), val(_val), prior(_prior) { };
 };
 
 class TFormula {
@@ -24,7 +29,8 @@ class TFormula {
 	string outFormula;
 	bool isReadyOutFormula;
 
-	ICollection<Lexem*>* qRevPolNot;
+	Queue<Lexem*>* qRevPolNot;
+	map<string, int>* vars;
 
     void LexicalAnalysis(ICollection<Lexem*>* q);
 	void SyntacticAnalysis(ICollection<Lexem*>* qI, ICollection<Lexem*>* qO);
@@ -36,6 +42,8 @@ public:
 
 	const string& getInpFormula() const;
 	const string& getOutFormula() const;
+	bool isVars() const;
+	bool setVars();
 
 	void conversToRevPolNot();
 	int calcArithmExp();
