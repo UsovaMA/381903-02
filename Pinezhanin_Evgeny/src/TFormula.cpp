@@ -348,20 +348,8 @@ void TFormula::conversToRevPolNot()
     ICollection<Lexem*>* q = new Queue<Lexem*>(maxSizeCollection);
     LexicalAnalysis(q);
 
-    //while(!q->isEmpty())
-    //{
-    //    Lexem* l = q->pop();
-    //    cout << l->s << " " << l->te << " " << l->val << endl;
-    //}
-
     ICollection<Lexem*>* qN = new Queue<Lexem*>(maxSizeCollection);
     SyntacticAnalysis(q, qN);
-
-    //while(!qN->isEmpty())
-    //{
-    //    Lexem* l = qN->pop();
-    //    cout << l->s << " " << l->te << " " << l->val << endl;
-    //}
 
     State state;
     state = q0;
